@@ -1,0 +1,441 @@
+/* ==========================================================================
+   SPOTIFY TRANSPARENT THEME - WERSJA DZIAŁAJĄCA 100%
+   ========================================================================== */
+
+/* ==========================================================================
+   1. TAPETA - MUSI BYĆ NA SAMYM SPODZIE
+   ========================================================================== 
+   
+   #FFA000 musi byc akcentem w przyszlosci
+*/
+   
+
+body {
+    background-color: #000 !important;
+}
+.main {
+--section-background-base: #00000000;
+}
+:root {
+   --spice-main: #00000000;
+   --spice-player: #00000060;
+   --spice-card: #00000000;
+   --spice-misc: #00000000;
+   --spice-rgb-shadow: 0, 0, 0, 0;
+   --encore-overlay-box-shadow: 0 0px 0px 0 #00000000;
+   --spice-sidebar: pizda; /* tu musi to byc */
+   --spice-highlight-elevated: #00000060;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-image: url("https://i.ibb.co/67mgr08M/download.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(80px) brightness(1.00); /* tu sie szponci */
+    z-index: -1 !important;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   2. TOTALNIE PRZEZROCZYSTE TŁO - WSZĘDZIE
+   ========================================================================== */
+
+/* Główne kontenery */
+html,
+body,
+#main,
+.Root,
+.Root__top-container,
+.Root__main-view,
+.Root__nav-bar,
+.Root__now-playing-bar {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Główny widok i scrollowanie */
+.main-view-container,
+.main-view-container__scroll-node,
+.main-view-container__scroll-node-child,
+.os-host,
+.os-host-overflow,
+.os-host-overflow-x,
+.os-host-overflow-y,
+.os-padding,
+.os-viewport,
+.os-viewport-native-scrollbars-invisible,
+.os-content {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Sidebar (Your Library) */
+.main-yourLibraryX-library,
+.main-yourLibraryX-libraryRootlist,
+.main-navBar-navBar,
+.main-yourLibraryX-navLink {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Sidebar items - playlists, folders */
+.main-yourLibraryX-listItem,
+.main-yourLibraryX-listItemButton,
+.main-rootlist-rootlistPlaylistButton,
+.main-rootlist-rootlistFolderButton,
+[data-testid="rootlist-item"],
+.main-yourLibraryX-contentItem {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Sidebar hover and selected states */
+.main-yourLibraryX-listItem:hover,
+.main-yourLibraryX-listItemButton:hover,
+.main-rootlist-rootlistPlaylistButton:hover,
+.main-rootlist-rootlistFolderButton:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.main-yourLibraryX-listItem[aria-selected="true"],
+.main-rootlist-rootlistPlaylistButton[aria-selected="true"] {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Top bar */
+.main-topBar-container,
+.main-topBar-background,
+.main-topBar-overlay {
+    background: none !important;
+    background-color: #00000000 !important;
+/*    backdrop-filter: blur(1px); */
+}
+
+/* Header i entity header */
+.main-entityHeader-container,
+.main-entityHeader-background,
+.main-entityHeader-backgroundColor,
+.main-entityHeader-overlay,
+.main-actionBarBackground-background {
+    background: none !important;
+    background-color: transparent !important;
+}
+.main-trackList-trackListHeader {
+    background: #ff0000 !important;
+    background-color: #00000000 !important;
+    position: static !important;;
+    }
+    
+    
+/* Home view */
+.main-home-homeHeader,
+.main-shelf-shelf {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Player bar na dole */
+.main-nowPlayingBar-container,
+.main-nowPlayingBar-nowPlayingBar,
+footer {
+    background: none !important;
+    background-color: transparent !important;
+    border-top: none !important;
+}
+
+/* Prawy sidebar (jeśli jest) */
+.Root__right-sidebar,
+.main-buddy-feed {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* ==========================================================================
+   3. NAPRAWA OBRAZKÓW
+   ========================================================================== */
+.main-card-imageContainer,
+.main-cardImage-imageWrapper,
+[data-testid="card-image-container"] {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.main-card-imageContainer img,
+.main-image-image,
+[data-testid="card-image-container"] img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
+    border-radius: 8px !important;
+}
+
+/* ==========================================================================
+   4. TEKST BIAŁY
+   ========================================================================== 
+* {
+    color: #ffffff !important;
+}
+*/
+/* ==========================================================================
+   5. UKRYCIE PASKA PRZEWIJANIA
+   ========================================================================== */
+.os-scrollbar {
+    display: none !important;
+}
+
+/* ==========================================================================
+   6. HOVER NA KARTACH
+   ========================================================================== */
+.main-card-card:hover,
+.main-trackList-trackListRow:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* rzeczy dodane od uzytkownika ktore ai nie moze kurwa zmieniac bo sa po prostu dobrze napisane */
+.main-yourLibraryX-libraryContainer {
+    background-color: #00000000;
+}
+.Root__globalNav {
+    background-color: #00000000;
+}
+.ChipInnerComponent-sm-selected-isUsingKeyboard {
+    background-color: #00000000; /* moze byc tez 60 ale nie musi */
+}
+
+.NowPlayingView {
+    background-color: #00000000;
+}
+/*
+.UrfDp0_mKGL9hkfh9g_R:before {
+    background-color: #00000000;
+}*/
+.main-connectBar-connectBar.main-connectBar-connected { /* granie na innym urzadzeniu */ 
+    background-color: #00000060;
+    color: var(--text-base);
+}
+.main-entityHeader-backgroundColor { display: none !important; } .main-actionBarBackground-background { display: none !important; } .main-home-homeHeader { display: none !important; } .playlist-playlist-actionBarBackground-background { display: none !important; }/*
+.mzBZbIt7NDzzTffimVhn.TjX06ItOHm0J21btzLaj {
+    background: #00000000;
+}*/
+/*
+.ARSbx0SA65V5vol27FS4.main-trackList-trackListHeader {
+    box-shadow: 0 -1px 0 0 #00000000;
+    background: #00000000;
+    backdrop-filter: blur(1px);
+    border-bottom: 0px solid #00000000;
+}*/
+
+
+.view-homeShortcutsGrid-shortcut
+ {
+    background-color: #00000000;
+}
+.main-globalNav-searchInputContainer .main-topBar-searchBar {
+    background: #222924;
+}
+.ChipInnerComponent-sm-isUsingKeyboard {
+    background-color: #00000060;
+}
+
+.main-nowPlayingView-section {
+    background-base: #00000000;
+    background: #00000000;
+    section-background-base: #00000000;
+    background-color: #00000000 !important;
+}
+
+#Desktop_PanelContainer_Id {
+    background-color: #00000000 !important;
+    background: transparent !important;
+    --background-base: transparent !important;
+}
+
+.playlist-playlist-playlistContent {
+    background: #00000000;
+    }
+.main-nowPlayingView-contextItemInfo:before {
+    background-image: none !important;
+    background: none !important;
+}
+
+.main-home-filterChipsSection {
+    background-color: #00000000;
+}
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageWrapper {
+    background-color: #00000000;
+}
+
+.main-home-content {
+    --carousel-start-chevron-gradient: hsla(0, 0%, 0%, 0) !important;
+    --carousel-end-chevron-gradient: hsla(0, 0%, 0%, 0) !important;
+}
+
+
+.encore-dark-theme .encore-inverted-light-set {
+    --background-base: #191b17;
+}
+.encore-dark-theme, .encore-dark-theme .encore-base-set {
+    --background-base: #00000000;
+    --background-highlight: #00000000;
+    --background-press: #00000000;
+    --background-elevated-base: #00000000;
+}
+.main-card-imageContainer img, .main-image-image, [data-testid="card-image-container"] img {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0) !important;
+    }
+
+.x-entityImage-imageContainer {
+    background-color: #00000000;
+  }
+  
+  .Root__globalNav .main-globalNav-navLink {
+    background-color: #00000000;
+}
+
+.main-useDropTarget-base,
+/*.main-useDropTarget-track,
+.main-useDropTarget-episode,
+.main-useDropTarget-album */{
+    background-color: #00000060;
+}
+.ChipInnerComponent-sm {
+    background-color: #00000000;
+    }
+.main-nowPlayingView-section {
+    background-color: #00000000 !important; 
+    }
+.NowPlayingView {
+    section-background-base: #00000000;
+    background-color: #00000000;
+    background-base: #00000000;
+}
+.NowPlayingView, :root {
+    --section-background-base: #00000000 !important;
+    background-color: transparent !important;
+}
+.NowPlayingView {
+    --section-background-base: #00000000 !important;
+    --background-color: #00000000 !important;
+    --background-base: #00000000 !important;
+}
+#Desktop_PanelContainer_Id_1 {
+    --section-background-base: transparent !important;
+}
+
+/* tak zositawei te 4 rozne kody pomimo ze nie ma to sensu a co */
+
+.main-cardImage-imageWrapper {
+    background-color: #00000000;
+    box-shadow: rgba(0, 0, 0, 0.0) 0px 0px 0px;
+    }
+    
+    
+/* spicetify */
+.searchbar-bar {
+    border-style: none;
+    background-color: #000000!important;
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #ff0000 !important;
+    border-color: #00000000;
+}
+.e-91000-box--elevated {
+    background-color: #00000060;
+    backdrop-filter: brightness(0.54) blur(10px);
+    }
+    
+    
+    
+    /* chyba jednak dodaje shadowy */
+.main-card-imageContainer img, .main-image-image, [data-testid="card-image-container"] img {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+.main-card-card {
+    background: #00000000;
+}
+
+.marketplace-tabBar-active {
+    background-color: #00000060;
+}
+.main-contextMenu-menu {
+    background-color: #00000060;
+    backdrop-filter: blur(60px);
+    border-radius: 10px;
+    overflow-y: none !important;
+    }
+.search-searchCategory-carouselButton {
+    background-color: #272c22;
+    }
+    
+        
+.GenericModal__overlay {
+   /* backdrop-filter: blur(5px);*/
+}
+.encore-dark-theme, .encore-dark-theme .encore-base-set {
+    background-color: #00000060;
+    }
+    /* wyszukiwarka *//*
+.TypeList__TypeListElement-sc-1jhixr6-0, .TypeListElement-grid-typeList-condensedAll {
+    backdrop-filter: blur(30px);
+}*/
+.cover-art {
+    background-color: #292718;
+    }
+    
+.playlist-playlist-playlistContent {
+backdrop-filter: blur(30px);
+}
+.x-explicit-label {
+    background-color: #00000060;
+    }
+.x-explicit-label {
+    color: #ffffff80;
+}
+/* ==========================================================================
+   FIX MENU KONTEKSTOWEGO - WERSJA POPRAWIONA (Działają podmenu)
+   ========================================================================== */
+
+/* 1. Resetujemy overflow, żeby podmenu (Add to playlist) mogły wystawać poza ramkę */
+.main-contextMenu-menu {
+    overflow: unset !important; /* Przywraca domyślne zachowanie Spotify */
+}
+
+/* 2. Ukrywamy wizualnie pasek przewijania (jeśli się pojawi), ale nie blokujemy funkcji */
+.main-contextMenu-menu::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    background: transparent !important;
+}
+
+/* Opcjonalnie: Zabezpieczenie dla listy wewnątrz menu (gdyby to ona scrollowała) */
+.main-contextMenu-menuItem {
+    overflow: visible !important;
+}
+.encore-dark-theme, .encore-dark-theme .encore-base-set
+Specificity: (0,1,0)
+ {
+    background-color: #00000000;
+}
+.main-confirmDialog-container {
+    background-color: #00000060;
+    backdrop-filter: blur(30px);
+    }
+.body, .dialog {
+    color: var(--spice-subtext);
+}
+.main-contextMenu-tippy {
+    background-color: #00000060;
+    backdrop-filter: blur(30px);
+    }
+
+
+.playlist-playlist-actionBarBackground-background {
+background-color: #FFA00050;
+}
